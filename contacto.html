@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Note — Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Canvases de ambiente y partículas del cursor -->
+    <canvas id="particulas-sitio" class="particulas-canvas particulas-sitio"></canvas>
+    <canvas id="estela-cursor" class="estela-cursor"></canvas>
+
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Inicio - Death Note">
+            <img class="logo-deathnote" src="imagenes/logo_deathnote.webp" alt="Death Note">
+        </a>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="menu-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="expediente.html">Expediente</a></li>
+                <li><a href="contacto.html" aria-current="page" class="btn-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header class="cabecera-interna">
+            <h1>Contacto</h1>
+            <p>Si tienes alguna pregunta, testimonio o deseas remitir un nuevo reporte al expediente de la investigación, utiliza el siguiente formulario cifrado.</p>
+        </header>
+
+        <section class="contenido-interno">
+            <div class="contenedor-angosto">
+                <form action="#" method="post" class="formulario-contacto">
+                    <div class="grupo-form">
+                        <label for="nombre">Nombre o Alias</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required placeholder="Ej. Raye Penber">
+                    </div>
+
+                    <div class="grupo-form">
+                        <label for="email">Canal de contacto (Email)</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required placeholder="correo@ejemplo.com">
+                    </div>
+
+                    <div class="grupo-form">
+                        <label for="mensaje">Expediente (Mensaje)</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe aquí los detalles del reporte..."></textarea>
+                    </div>
+
+                    <button type="submit" class="boton boton-primario">Enviar Reporte</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <span class="wordmark">Death Note</span>
+                <p>Sitio de fans no oficial. Todas las imágenes pertenecen a sus respectivos autores.</p>
+            </div>
+            <ul class="footer-redes" aria-label="Redes sociales">
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; 2026 Death Note — Todos los derechos reservados a sus autores originales.</p>
+        </div>
+    </footer>
+
+    <!-- Reproductor de música ambiental glassmorphism -->
+    <div class="reproductor-ambiente" role="group" aria-label="Reproductor de música de fondo">
+        <div class="reproductor-panel" id="reproductor-panel">
+            <button id="btn-play-pause" class="reproductor-boton-panel" aria-pressed="false" aria-label="Pausar música">
+                <i class="fa-solid fa-pause" id="icono-play-pause"></i>
+            </button>
+
+            <input type="range" id="control-volumen" class="control-volumen" min="0" max="100" value="50" aria-label="Volumen">
+
+            <button id="btn-mute" class="reproductor-boton-panel" aria-pressed="false" aria-label="Silenciar">
+                <i class="fa-solid fa-volume-high" id="icono-mute"></i>
+            </button>
+        </div>
+
+        <button id="btn-toggle-reproductor" class="reproductor-boton-principal" aria-expanded="false" aria-controls="reproductor-panel" aria-label="Abrir controles de música">
+            <i class="fa-solid fa-volume-high" id="icono-toggle-reproductor"></i>
+        </button>
+
+        <audio id="audio-musica" src="audio/ambiente1.wav" loop preload="auto"></audio>
+    </div>
+
+    <script src="js/base.js"></script>
+</body>
+</html>

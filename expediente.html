@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Note — Expediente del Caso Kira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS de GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Canvases de ambiente y estela del cursor -->
+    <canvas id="particulas-sitio" class="particulas-canvas particulas-sitio"></canvas>
+    <canvas id="estela-cursor" class="estela-cursor"></canvas>
+
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Inicio - Death Note">
+            <img class="logo-deathnote" src="imagenes/logo_deathnote.webp" alt="Death Note">
+        </a>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="menu-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="expediente.html" aria-current="page">Expediente</a></li>
+                <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header class="cabecera-interna">
+            <h1>Expediente del Caso Kira</h1>
+            <p>Informe compilado por la fuerza conjunta de investigación durante la cacería de Kira: perfiles psicológicos, identidades encubiertas y reportes de campo sobre cada sujeto de interés vinculado a la mayor cadena de muertes sin explicación registrada hasta la fecha.</p>
+        </header>
+
+        <section class="contenido-interno">
+            <div class="contenedor-ancho">
+
+                <!-- Sección 1: Perfiles de alto impacto -->
+                <div class="bloque-expediente">
+                    <h2 class="titulo-bloque">Perfiles de Alto Impacto</h2>
+                    <div class="grid-expediente">
+
+                        <article class="tarjeta-expediente">
+                            <a href="imagenes/personaje-light-yagami.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Light Yagami // Kira">
+                                <img src="imagenes/personaje-light-yagami.webp" alt="Retrato de Light Yagami">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Light Yagami</h3>
+                                <p class="resumen-tactico">Hijo de un alto oficial de policía, primero en cada examen que rindió y sin un solo antecedente disciplinario. Ese mismo perfil intachable es lo que le permitió operar sin levantar sospechas durante meses: aplicó a los criminales el mismo rigor metódico que a sus estudios, y a cada persona que se le acercó, el mismo cálculo frío que a un problema por resolver.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-expediente">
+                            <a href="imagenes/personaje-l.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="L Lawliet // Ryuzaki">
+                                <img src="imagenes/personaje-l.webp" alt="Retrato del detective L">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">L Lawliet</h3>
+                                <p class="resumen-tactico">Nunca reveló su rostro a nadie fuera de su círculo más íntimo, ni siquiera a la policía que lo contrató. Trabaja sentado en cuclillas, se alimenta casi exclusivamente de dulces y desconfía por principio de cualquier dato que no pueda verificar dos veces. Fue el primero en deducir, con apenas un puñado de muertes, que el sujeto tenía acceso a información policial confidencial.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-expediente">
+                            <a href="imagenes/personaje-misa-amane.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Misa Amane // Segundo Kira">
+                                <img src="imagenes/personaje-misa-amane.webp" alt="Retrato de Misa Amane">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Misa Amane</h3>
+                                <p class="resumen-tactico">Ídolo de la televisión con un motivo personal para odiar a los criminales: el asesino de sus padres quedó libre por un tecnicismo, hasta que ella misma lo ejecutó con su propio cuaderno. Su devoción hacia el sujeto principal no admite matices ni dudas, lo que la vuelve tan valiosa como impredecible para cualquier plan que dependa de la discreción.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-expediente">
+                            <a href="imagenes/personaje-ryuk.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Ryuk // Entidad Shinigami">
+                                <img src="imagenes/personaje-ryuk.webp" alt="Retrato del shinigami Ryuk">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Ryuk</h3>
+                                <p class="resumen-tactico">Dejó caer su cuaderno al mundo humano por simple aburrimiento, sin ningún interés en cómo terminara siendo usado. Se alimenta exclusivamente de manzanas y observa cada muerte con la misma curiosidad distante de quien mira un experimento ajeno. No interviene, no advierte y no elige bando: solo espera a ver qué pasa.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-expediente">
+                            <a href="imagenes/personaje-near.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Near // Nate River">
+                                <img src="imagenes/personaje-near.webp" alt="Retrato de Near">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Near</h3>
+                                <p class="resumen-tactico">Reconstruye cada caso como si fuera un rompecabezas físico, literalmente: no se separa de sus figuras y juguetes de construcción mientras piensa. Heredó de L la costumbre de no confiar en nada que no pueda comprobar por sí mismo, pero prefiere la paciencia de armar la trampa perfecta antes que la confrontación directa.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-expediente">
+                            <a href="imagenes/personaje-mello.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Mello // Mihael Keehl">
+                                <img src="imagenes/personaje-mello.webp" alt="Retrato de Mello">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Mello</h3>
+                                <p class="resumen-tactico">Nunca perdonó haber quedado en segundo lugar detrás de Near, y esa rivalidad es lo que lo empuja a tomar riesgos que la SPK jamás autorizaría. No duda en negociar con la mafia si eso acerca una respuesta, y siempre lleva una barra de chocolate a mano, como si necesitara algo constante en medio de tanto cálculo.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Sección 2: Registros secundarios y ejecutores -->
+                <div class="bloque-expediente">
+                    <h2 class="titulo-bloque">Registros Secundarios y Ejecutores</h2>
+                    <div class="grid-expediente grid-expediente-secundaria">
+
+                        <article class="tarjeta-expediente tarjeta-expediente-compacta">
+                            <a href="imagenes/personaje-rem.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Rem // Shinigami Protector">
+                                <img src="imagenes/personaje-rem.webp" alt="Retrato de la shinigami Rem">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Rem</h3>
+                                <p class="resumen-tactico">Cedió su propio cuaderno a Misa por voluntad propia, algo sin precedentes entre su especie. Su lealtad hacia ella no tiene condiciones ni límites: está dispuesta a sacrificar su existencia entera antes que permitir que algo le ocurra.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-expediente tarjeta-expediente-compacta">
+                            <a href="imagenes/galeria-teru-mikami.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Teru Mikami // El Fiscal">
+                                <img src="imagenes/galeria-teru-mikami.webp" alt="Teru Mikami con la libreta">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Teru Mikami</h3>
+                                <p class="resumen-tactico">Fiscal que lleva un diario propio donde anota, con letra minuciosa, cada acto que considera injusto. Fue elegido como sucesor por compartir la misma convicción absoluta sobre el bien y el mal, sin la cautela que caracterizaba al sujeto original.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-expediente tarjeta-expediente-compacta">
+                            <a href="imagenes/galeria-lind-tailor.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Lind L. Tailor // Señuelo Kanto">
+                                <img src="imagenes/galeria-lind-tailor.webp" alt="Transmisión de Lind L. Tailor">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Lind L. Tailor</h3>
+                                <p class="resumen-tactico">Convicto que se presentó en una transmisión nacional haciéndose pasar por el detective L, como carnada para forzar una reacción. Murió en cámara a los pocos minutos, y esa muerte fue la primera prueba real del alcance y la velocidad del sujeto principal.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-expediente tarjeta-expediente-compacta">
+                            <a href="imagenes/personaje-misa-amane.webp" class="glightbox" data-gallery="expediente-sujetos" data-title="Kiyomi Takada // Portavoz Pública">
+                                <img src="imagenes/Kiyomi-Takada1.webp" alt="Retrato de referencia para Kiyomi Takada">
+                            </a>
+                            <div class="cuerpo-expediente">
+                                <h3 class="meta-sujeto">Kiyomi Takada</h3>
+                                <p class="resumen-tactico">Presentadora de noticias y ex pareja del sujeto principal durante su etapa universitaria. Convertida en la voz pública de la ideología Kira frente a las cámaras, mantiene un vínculo personal con él que la vuelve, al mismo tiempo, un activo y un blanco.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <span class="wordmark">Death Note</span>
+                <p>Sitio de fans no oficial. Todas las imágenes pertenecen a sus respectivos autores.</p>
+            </div>
+            <ul class="footer-redes" aria-label="Redes sociales">
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; 2026 Death Note — Todos los derechos reservados a sus autores originales.</p>
+        </div>
+    </footer>
+
+    <!-- Reproductor de música ambiental glassmorphism -->
+    <div class="reproductor-ambiente" role="group" aria-label="Reproductor de música de fondo">
+        <div class="reproductor-panel" id="reproductor-panel">
+            <button id="btn-play-pause" class="reproductor-boton-panel" aria-pressed="false" aria-label="Pausar música">
+                <i class="fa-solid fa-pause" id="icono-play-pause"></i>
+            </button>
+
+            <input type="range" id="control-volumen" class="control-volumen" min="0" max="100" value="50" aria-label="Volumen">
+
+            <button id="btn-mute" class="reproductor-boton-panel" aria-pressed="false" aria-label="Silenciar">
+                <i class="fa-solid fa-volume-high" id="icono-mute"></i>
+            </button>
+        </div>
+
+        <button id="btn-toggle-reproductor" class="reproductor-boton-principal" aria-expanded="false" aria-controls="reproductor-panel" aria-label="Abrir controles de música">
+            <i class="fa-solid fa-volume-high" id="icono-toggle-reproductor"></i>
+        </button>
+
+        <audio id="audio-musica" src="audio/ambiente1.wav" loop preload="auto"></audio>
+    </div>
+
+    <script src="js/base.js"></script>
+
+    <!-- Script de GLightbox -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            zoomable: true
+        });
+    </script>
+</body>
+</html>

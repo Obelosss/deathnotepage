@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Death Note</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/estilos.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <button id="pantalla-inicial" class="reveal-screen" aria-label="Entrar al sitio" type="button">
+    <video class="reveal-screen-video" autoplay muted loop playsinline preload="auto" src="videos/intro-loop.mp4"></video>
+    <div class="reveal-screen-fondo"></div>
+    <canvas id="particulas-inicio" class="particulas-canvas particulas-inicio"></canvas>
+    <span class="reveal-screen-texto">Entrar al Archivo Kira</span>
+    </button>
+
+    <canvas id="particulas-sitio" class="particulas-canvas particulas-sitio"></canvas>
+    <canvas id="estela-cursor" class="estela-cursor"></canvas>
+
+<header class="site-header">
+    <a href="index.html" class="logo" aria-label="Inicio - Death Note">
+        <img class="logo-deathnote" src="imagenes/logo_deathnote.webp" alt="Death Note">
+    </a>
+    <nav class="site-nav" aria-label="Navegación principal">
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul id="menu-principal">
+            <li><a href="index.html" aria-current="page">Inicio</a></li>
+            <li><a href="expediente.html">Expediente</a></li>
+            <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" aria-labelledby="hero-titulo">
+        <div class="hero-fondo" style="background-image:url('imagenes/hero01.jpg');"></div>
+        <div class="hero-degradado"></div>
+        <div class="hero-contenido">
+            <div class="contenedor-manzana-3d" id="contenedor-manzana">
+                <model-viewer
+                    id="visor-manzana"
+                    class="manzana-viewer"
+                    src="obj/apple.glb"
+                    alt="Manzana de Ryuk en 3D"
+                    auto-rotate
+                    auto-rotate-delay="0"
+                    rotation-per-second="25deg"
+                    disable-zoom
+                    interaction-prompt="none"
+                    shadow-intensity="0"
+                    exposure="1.1">
+                </model-viewer>
+            </div>
+
+            <h1 id="hero-titulo">El cuaderno que reescribió el destino</h1>
+            <br>
+            <div class="hero-acciones">
+                <a href="personajes.html" class="boton boton-primario">Conocer personajes</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-trailer" aria-labelledby="trailer-titulo">
+        <div class="contenedor-angosto">
+            <h2 id="trailer-titulo">Tráiler Oficial // El Juicio de Kira</h2>
+            <div class="divisor"></div>
+            <p class="texto-contexto">El registro del choque intelectual que redefinió el thriller psicológico. Un estudiante prodigio frente al poder absoluto de un cuaderno sobrenatural, y la respuesta inmediata del mejor detective del mundo.</p>
+
+            <div class="marco-video">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/NlJZ-YgAt-c"
+                    title="Tráiler Oficial // Death Note"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="ficha-tecnica">
+                <h3>Premisa de la Investigación</h3>
+                <p>Cuando Light Yagami descubre la Death Note, inicia una purga sistemática de criminales bajo la identidad de Kira para forjar un nuevo orden mundial. Frente a la escalada global, la policía internacional recurre a L, un misterioso detective que inicia una cacería psicológica donde cometer un solo error significa la muerte.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-reglas" aria-labelledby="reglas-titulo">
+        
+    </section>
+
+    <section class="seccion-protagonistas" aria-labelledby="protagonistas-titulo">
+        
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-contenido">
+        <div class="footer-marca">
+            <span class="wordmark">Death Note</span>
+            <p>Sitio de fans no oficial. Todas las imágenes pertenecen a sus respectivos autores.</p>
+        </div>
+        <ul class="footer-redes" aria-label="Redes sociales">
+            <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-legal">
+        <p>&copy; 2026 Death Note — Todos los derechos reservados a sus autores originales.</p>
+    </div>
+</footer>
+
+<div class="reproductor-ambiente" role="group" aria-label="Reproductor de música de fondo">
+    <div class="reproductor-panel" id="reproductor-panel">
+        <button id="btn-play-pause" class="reproductor-boton-panel" aria-pressed="false" aria-label="Pausar música">
+            <i class="fa-solid fa-pause" id="icono-play-pause"></i>
+        </button>
+
+        <input type="range" id="control-volumen" class="control-volumen" min="0" max="100" value="50" aria-label="Volumen">
+
+        <button id="btn-mute" class="reproductor-boton-panel" aria-pressed="false" aria-label="Silenciar">
+            <i class="fa-solid fa-volume-high" id="icono-mute"></i>
+        </button>
+    </div>
+
+    <button id="btn-toggle-reproductor" class="reproductor-boton-principal" aria-expanded="false" aria-controls="reproductor-panel" aria-label="Abrir controles de música">
+        <i class="fa-solid fa-volume-high" id="icono-toggle-reproductor"></i>
+    </button>
+
+    <audio id="audio-musica" src="audio/ambiente1.wav" loop preload="auto"></audio>
+</div>
+
+<script src="js/base.js"></script>
+</body>
+</html>
